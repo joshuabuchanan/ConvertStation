@@ -1,0 +1,8 @@
+"use client";
+import { useEffect, useState } from "react";
+import { Download, Trash2 } from "lucide-react";
+import { clearHistory, getHistory } from "@/lib/storage";
+import { formatBytes } from "@/lib/utils";
+import type { HistoryItem } from "@/lib/types";
+import Link from "next/link";
+export default function HistoryPage(){const [items,setItems]=useState<HistoryItem[]>([]);useEffect(()=>{setItems(getHistory())},[]);return <><div className="page-head"><div><p className="eyebrow">WORKSTATION LOG</p><h1>Conversion history</h1><p>Your browser keeps a lightweight local record of conversions. Clearing site data also clears this history.</p></div><button className="button secondary" onClick={()=>{clearHistory();setItems([])}} disabled={!items.length}><Trash2 size={16}/> Clear history</button></div><section className="panel"><div className="panel-header"><h2>{items.length} recorded conversion{items.length!==1?"s":""}</h2><Link href="/workspace" className="text-link">New conversion</Link></div>{items.length===0?<div className="empty-state"><p>No conversion history yet.</p><Link className="button primary" href="/workspace">Open workstation</Link></div>:<div className="recent-list">{items.map(item=><div className="recent-row" key={item.id}><div className="file-icon">{item.to.toUpperCase()}</div><div className="recent-main"><strong>{item.name}</strong><span>{item.from.toUpperCase()} → {item.to.toUpperCase()} · {formatBytes(item.size)}{item.outputSize?` → ${formatBytes(item.outputSize)}`:""}</span></div><span className={item.status==="complete"?"status-pill queued":"status-pill error"}>{item.status}</span>{item.status==="complete"&&<Download size={16} color="var(--muted)"/>}</div>)}</div>}</section></>}

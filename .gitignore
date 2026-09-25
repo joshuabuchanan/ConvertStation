@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.*.local
+!.env.example
+tmp/
+.vscode/
+*.log
+tsconfig.tsbuildinfo
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

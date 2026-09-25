@@ -1,0 +1,2 @@
+import ConverterDropzone from "@/components/converter/dropzone";
+export default function WorkspacePage(){return <><div className="page-head"><div><p className="eyebrow">CONVERTER</p><h1>Conversion workstation</h1><p>Queue files from any catalogued format family. Media stays local in your browser; documents, archives, ebooks, presentations, spreadsheets, and vectors use the configured remote engine.</p></div></div><ConverterDropzone /></>}
