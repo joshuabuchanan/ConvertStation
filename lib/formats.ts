@@ -68,7 +68,7 @@ export const acceptMap = {
 export const supportedCategories: MediaCategory[] = ["image", "video", "audio", "document", "archive", "ebook", "presentation", "spreadsheet", "vector"];
 
 const hiddenSupportedMediaFormats = new Set([
-  "cdr", "ai", "numbers", "pot", "key", "tcr", "rb", "prc", "pml", "pdb", "mobi", "lrf", "lit", "htmlz", "fb2", "chm", "cbz", "cb7", "azw4", "azw", "cbr", "wma",
+  "cdr", "ai", "numbers", "pot", "key", "tcr", "rb", "prc", "pml", "pdb", "lrf", "lit", "htmlz", "chm", "cbz", "cb7", "azw4", "azw", "cbr", "wma",
   "tar.xz", "tar.gz", "rpm", "rar", "lzo", "lzma", "lz", "lha", "jar", "iso", "gz", "dmg", "deb", "cpio", "cab", "bz2", "bz", "arj", "arc", "alz", "ace", "7z",
   "djvu", "xps", "odt", "htm", "265", "hevc", "264", "h264", "ogv", "flv", "wmv", "3g2", "3gp", "mp4v", "m4v", "tga", "raw", "tiff", "tif", "ico", "bmp",
 ]);
