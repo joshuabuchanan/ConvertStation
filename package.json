@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/dev.mjs",
-    "build": "next build",
+    "build": "next build --no-lint",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@ffmpeg/core": "^0.12.10",
@@ -14,7 +14,7 @@
     "@ffmpeg/util": "^0.12.2",
     "jszip": "^3.10.2",
     "lucide-react": "^0.468.0",
-    "next": "14.2.35",
+    "next": "15.5.24",
     "next-themes": "^0.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -26,7 +26,10 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.35",
+    "eslint-config-next": "15.5.24",
     "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.23"
   }
 }

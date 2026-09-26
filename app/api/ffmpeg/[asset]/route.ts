@@ -9,8 +9,9 @@ const assets = {
 
 type AssetName = keyof typeof assets;
 
-export async function GET(_request: Request, { params }: { params: { asset: string } }) {
-  const asset = params.asset as AssetName;
+export async function GET(_request: Request, { params }: { params: Promise<{ asset: string }> }) {
+  const { asset: assetParam } = await params;
+  const asset = assetParam as AssetName;
   const contentType = assets[asset];
   if (!contentType) return new NextResponse("Not found", { status: 404 });
 

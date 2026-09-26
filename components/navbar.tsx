@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { History, Settings } from "lucide-react";
 import ThemeToggle from "./theme-toggle";
@@ -12,7 +13,7 @@ export default function Navbar() {
       <div className="brand-wrap">
         <Link href="/" className="brand" aria-label="ConvertStation home">
           <span className="brand-logo-frame">
-            <img className="brand-logo" src="/images/cslogo.svg" alt="ConvertStation" width={260} height={74} />
+            <Image className="brand-logo" src="/images/cslogo.svg" alt="ConvertStation" width={260} height={74} />
           </span>
         </Link>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { BookOpen, FileArchive, FileAudio, FileImage, FileText, FileVideo, Gauge, History, Home, Info, Presentation, Settings2, Shapes, Table2 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { categoryLabels, getSupportedMediaFormats, supportedCategories } from "@/lib/formats";
@@ -30,7 +31,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <img src="/images/convertstationlogo.svg" alt="ConvertStation" className="sidebar-brand-logo" />
+        <Image src="/images/convertstationlogo.svg" alt="ConvertStation" className="sidebar-brand-logo" width={1536} height={1024} />
       </div>
       <div className="side-section">
         <div className="side-label">WORKSTATION</div>
